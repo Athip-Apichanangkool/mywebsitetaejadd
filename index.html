@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>หน้าแรก - โปรไฟล์ของเอ็ม</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .profile img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    h2 {
+      color: #4a90e2;
+    }
+
+    /* Hamburger Menu Icon */
+    .menu-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .menu-icon div {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    /* Side Menu */
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #4a90e2;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .side-menu a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .side-menu a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile img {
+        margin-bottom: 20px;
+      }
+
+      .info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>โปรไฟล์ของเอ็ม</h1>
+  </header>
+
+  <!-- Hamburger Menu Icon -->
+  <div class="menu-icon" onclick="openMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Side Menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+    <a href="index.html">หน้าแรก</a>
+    <a href="portfolio.html">ผลงาน</a>
+    <a href="experience.html">ประสบการณ์และทักษะ</a>
+    <a href="contact.html">ติดต่อ</a>
+    <a href="honors.html">เกียรติประวัติ</a>
+  </div>
+
+  <div class="profile">
+    <img src="your-profile-image.jpg" alt="รูปโปรไฟล์">
+    <div class="info">
+      <h2>นายอธิป อภิชนังกูร</h2>
+      <p><strong>สถานศึกษา:</strong> โรงเรียนสวนกุหลาบวิทยาลัย นนทบุรี</p>
+      <p><strong>คำคม:</strong> โชคร้ายยังคงมี แต่โชคดียังมีกว่า</p>
+      <p><strong>แนะนำตัว:</strong> สวัสดีครับ ผมชื่อเอ็ม อายุ 17 ปี เข้าโรงเรียนส.ก.น. มาตอนม.ปลายครับ</p>
+      <p><strong>สิ่งที่สนใจ:</strong> งานวิดีโอ ภาพยนตร์ ดนตรี</p>
+    </div>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").style.width = "250px";
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").style.width = "0";
+    }
+  </script>
+
+</body>
+</html>
