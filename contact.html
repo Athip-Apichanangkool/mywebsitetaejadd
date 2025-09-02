@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ข้อมูลติดต่อ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      margin: 0;
+      background-color: #eafaf9;
+      color: #333;
+    }
+
+    header {
+      background-color: #008080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .menu-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .menu-icon div {
+      width: 30px;
+      height: 4px;
+      background-color: #ff7f50;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #008080;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .side-menu a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .side-menu a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .content {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #008080;
+      margin-top: 0;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .contact-info span {
+      font-weight: bold;
+      color: #ff7f50;
+    }
+
+    @media screen and (max-width: 768px) {
+      .contact-info {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ข้อมูลติดต่อ</h1>
+  </header>
+
+  <!-- Hamburger Menu Icon -->
+  <div class="menu-icon" onclick="openMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Side Menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+    <a href="index.html">หน้าแรก</a>
+    <a href="portfolio.html">ผลงาน</a>
+    <a href="experience.html">ประสบการณ์และทักษะ</a>
+    <a href="contact.html">ติดต่อ</a>
+    <a href="honors.html">เกียรติประวัติ</a>
+  </div>
+
+  <div class="content">
+    <h2>ช่องทางการติดต่อ</h2>
+    <div class="contact-info">
+      <p><span>อีเมล:</span> mathip1964@gmail.com</p>
+      <p><span>Facebook:</span> เอ็ม มมม</p>
+      <p><span>Instagram:</span> m.fxllz</p>
+    </div>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").style.width = "250px";
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").style.width = "0";
+    }
+  </script>
+
+</body>
+</html>
